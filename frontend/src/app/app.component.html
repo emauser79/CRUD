@@ -1,1 +1,15 @@
-<app-articleform></app-articleform>
+<!-- CARICA/AGGIORNA FOTO DEL PROFILO -->
+<div class="contenitore-card2">
+    <i class="fa-regular fa-images immagine" style="color: #e5e7eb;"></i>
+    <p class="testo-vista">Carica/Aggiorna l'immagine del profilo</p>
+    <input type="file" (change)="onFileSelected($event)">
+    <button class="btn_next" (click)="uploadImage()">
+        Carica/Aggiorna
+    </button>
+</div>
+
+<!-- IMMAGINE DEL PROFILO -->
+<div *ngIf="profileImageUrl" class="contenitore-immagine">
+    <img [src]="profileImageUrl" alt="Immagine del profilo">
+</div>
+
